@@ -1,0 +1,30 @@
+{
+    "nome": "ADESIVO PVC INCOLOR FRASCO",
+    "ncm": "3506.10.90",
+    "descricao": "Matérias albuminóides; produtos à base de amidos ou de féculas modificados; colas; enzimas. 
+    Colas e outros adesivos preparados, não especificados nem compreendidos em outras posições; produtos de 
+    qualquer espécie utilizados como colas ou adesivos, acondicionados para venda a retalho como colas ou 
+    adesivos, com peso líquido não superior a 1kg. Produtos de qualquer espécie utilizados como colas ou 
+    adesivos, acondicionados para venda a retalho como colas ou adesivos, com peso líquido não superior a 1kg. 
+    Outros. Marca: TIGRE. ",
+    "pais_registro": "Brasil",
+    "fabricante": "Desconhecido",
+    "distribuidor": "Desconhecido",
+    "categoria": "Desconhecido",
+    "marca": "TIGRE",
+    "preco_medio": "62.09",
+    "imagem": "https://www.ipage.com.br/ws/produto/v1/application/views/codebar/images/7899052589846.jpg",
+    "code_bar": "7899052589846",
+    "unidadesComerciais": [{
+        "code_bar": "7899052589846",
+        "tipo": "Unidade",
+        "embalagem": "1",
+        "lastro": "0",
+        "camada": "0.00",
+        "comprimento": "0.00",
+        "altura": "0.00",
+        "largura": "0.00",
+        "peso_liquido": "0.001",
+        "peso_bruto": "0.001"
+    }]
+}
