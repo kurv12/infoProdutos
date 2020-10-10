@@ -19,9 +19,15 @@ export default {
     mounted () {
       Produto.listar().then(resposta => {
         console.log(resposta.data)
-        this.dados = resposta.data
+        if(resposta.data['error']){
+          this.dados = resposta.data['msg']
+        }else{
+          this.dados = resposta.data
+        }
+        console.log(this.dados)
       })
   }
+
 }
 
 </script>
