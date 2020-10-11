@@ -2,24 +2,98 @@
     <header>
         <div class="buscador">
             <input type="text" id="txt_busca" name="text" placeholder="Digite o código de barras aqui" v-model="codigo">
-            <button class="btn_busca" >Buscar</button>
+            <button class="btn_busca" v-on:click="infoProduto">Buscar</button>
         </div>
         <div class="resultado">
-            <span class="nome_produto">Nome do produto: </span><br>
-            <span class="ncm_produto">NCM:</span><br>
-            <span class="desc_produto">Descrição:</span><br>
-            <span class="pais_produto">País de registro:</span><br>
-            <span class="fabricante_produto">Fabricante:</span><br>
-            <span class="distribuidor_produto">Distribuidor:</span><br>
-            <span class="categoria_produto">Categoria:</span><br>
-            <span class="marca_produto">Marca:</span><br>
-            <span class="preco_produto">Preço:</span>
-        </div>
+            <p v-if="erro">Erro: {{ mensagem }}</p>
+            <div v-else>
+                <span class="nome_produto">Nome do produto: {{nome}}</span><br>
+                <span class="ncm_produto">NCM: {{ncm}}</span><br>
+                <span class="desc_produto">Descrição: {{descricao}}</span><br>
+                <span class="pais_produto">País de registro: {{paisregistro}}</span><br>
+                <span class="fabricante_produto">Fabricante: {{fabricante}}</span><br>
+                <span class="distribuidor_produto">Distribuidor: {{distribuidor}}</span><br>
+                <span class="categoria_produto">Categoria: {{categoria}}</span><br>
+                <span class="marca_produto">Marca: {{marca}}</span><br>
+                <span class="preco_produto">Preço: {{preco}}</span>
+            </div>
+        </div>      
     </header>
 </template>
 
 <script>
+    export default {
+      data() {
+        return {
+          
+        }
+      },
+      methods: {
+        infoProduto() {
+         
+            
+          this.codigo = '';
+          }
+      }, 
 
+      props: {
+          nome: {
+              type: String,
+              required: true,
+              default: ''
+          },
+          ncm: {
+              type: String,
+              required: true,
+              default: ''
+          } ,
+          descricao: {
+              type: String,
+              required: true,
+              default: ''
+          } ,
+          paisregistro: {
+              type: String,
+              required: true,
+              default: ''
+          },
+          fabricante: {
+              type: String,
+              required: true,
+              default: ''
+          },
+          distribuidor: {
+              type: String,
+              required: true,
+              default: ''
+          } ,
+          categoria: {
+              type: String,
+              required: true,
+              default: ''
+          } ,
+          marca: {
+              type: String,
+              required: true,
+              default: ''
+          },
+          preco: {
+              type: String,
+              required: true,
+              default: ''
+          } ,
+          mensagem: {
+              type: String,
+              required: true,
+              default: ''
+          } ,
+          erro: {
+              type: Boolean,
+              required: true,
+              default: false
+          }
+      }
+    }
 </script>
 
 <style>
