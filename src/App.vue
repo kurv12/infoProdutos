@@ -1,6 +1,9 @@
 <template>
-  <Search v-bind:nome="this.nome" v-bind:ncm="this.ncm" v-bind:descricao="this.descricao" v-bind:paisregistro="this.paisregistro" v-bind:fabricante="this.fabricante" v-bind:distribuidor="this.distribuidor" v-bind:categoria="this.categoria" v-bind:marca="this.marca" v-bind:preco="this.preco" v-bind:mensagem="this.mensagem" v-bind:erro="this.erro" fcm="this.fcm">
-  </Search>
+  <Search v-bind:nome="this.nome" v-bind:ncm="this.ncm" v-bind:descricao="this.descricao" 
+  v-bind:paisregistro="this.paisregistro" v-bind:fabricante="this.fabricante" 
+  v-bind:distribuidor="this.distribuidor" v-bind:categoria="this.categoria" 
+  v-bind:marca="this.marca" v-bind:preco="this.preco" v-bind:mensagem="this.mensagem" 
+  v-bind:erro="this.erro" fcm="this.fcm" @buscar="buscarProdutos" />
   
 </template>
 
@@ -59,6 +62,11 @@ export default {
         }
         console.log(this.mensagem)
       })
+  }, 
+  methods: {
+    buscarProdutos() {
+       Produto.listar().then(resposta => {console.log(resposta.data)})
+    }
   }
 
 }

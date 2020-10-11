@@ -2,7 +2,7 @@
     <header>
         <div class="buscador">
             <input type="text" id="txt_busca" name="text" placeholder="Digite o código de barras aqui" v-model="codigo">
-            <button class="btn_busca" v-on:click="infoProduto">Buscar</button>
+            <button class="btn_busca" @click="buscar">Buscar</button>
         </div>
         <div class="resultado">
             <p v-if="erro">Erro: {{ mensagem }}</p>
@@ -29,12 +29,10 @@
         }
       },
       methods: {
-        infoProduto() {
-         
-            
-          this.codigo = '';
-          }
-      }, 
+       buscar() {
+        this.$emit('buscar')
+       }
+      },
 
       props: {
           nome: {
