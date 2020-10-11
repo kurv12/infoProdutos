@@ -8,6 +8,7 @@
 </template>
 
 <script>
+//import Axios from 'axios'
 import Search from './components/Search.vue'
 import Produto from './Ipega/produtos'
 
@@ -32,9 +33,11 @@ export default {
       erro: true
     }
   },
-    mounted () {
-      Produto.listar().then(resposta => {
-        console.log(resposta.data)
+  methods: {
+    buscarProdutos() {
+       Produto.listar().then(resposta => {
+         //console.log("toda a lista")
+        //console.log(resposta.data['nome'])
         if(resposta.data['error']){
           this.erro = resposta.data['error']
           this.mensagem = resposta.data['msg']
@@ -60,12 +63,9 @@ export default {
           this.marca = resposta.data['marca']
           this.preco = resposta.data['preco_medio']
         }
-        console.log(this.mensagem)
+        //console.log("mensagem de erro")
+        //console.log(this.mensagem)
       })
-  }, 
-  methods: {
-    buscarProdutos() {
-       Produto.listar().then(resposta => {console.log(resposta.data)})
     }
   }
 

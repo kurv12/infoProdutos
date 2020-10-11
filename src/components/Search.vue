@@ -25,7 +25,7 @@
     export default {
       data() {
         return {
-          
+          codigo: this.codigo
         }
       },
       methods: {
