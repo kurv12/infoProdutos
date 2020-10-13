@@ -25,12 +25,12 @@
     export default {
       data() {
         return {
-          codigo: this.codigo
+          codigo: ''
         }
       },
       methods: {
        buscar() {
-        this.$emit('buscar')
+        this.$emit('buscar', this.codigo)
        }
       },
 
